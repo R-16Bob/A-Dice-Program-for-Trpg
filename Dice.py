@@ -9,7 +9,7 @@ def help():
 	print("---------------------------------------------------") 
 	print("t- roll a D100")
 	print("m- jump to main program")
-	print("h- You now is using this function")
+	print("h- You now are using this function")
 	print("e- exit this program")
 	
 def ten():
