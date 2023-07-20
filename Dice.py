@@ -10,6 +10,7 @@ def help():
 	print("t- roll a D100")
 	print("m- jump to main program")
 	print("h- You now are using this function")
+	print("d- 安科模式")
 	print("e- exit this program")
 	
 def ten():
@@ -34,6 +35,23 @@ def main():
 		print("roll again?(y or n)")
 		again=input(prompt)
 
+def d():
+	while(True):
+		str=input("input: ")
+		num=int(str[0])
+		face=int(str[2:])
+		if num==1:
+			print(f'【{str}={random.randint(1,face)}】')
+		else:
+			print(f'【{str}=',end='')
+			print(f'{random.randint(1, face)}',end='')
+			for i in range(num-1):
+				print(', ', end='')
+				print(f'{random.randint(1,face)}',end='')
+			print('】')
+
+
+
 def menu():
 	print("This is a Dice program by R-16Bob")
 	print("Enter 'h'for help if you first use .")
@@ -45,6 +63,8 @@ def menu():
 			ten()
 		if(command=='m'):
 			main()
+		if(command=='d'):
+			d()
 		if(command=='e'):
 			break 
 		
